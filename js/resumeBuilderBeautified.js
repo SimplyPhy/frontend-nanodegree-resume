@@ -15,7 +15,7 @@ var bio = {
         twitter: "@misterme",
         location: "Rawlins, WY"
     },
-    welcomeMessage: "Welcome to my online resume!",
+    welcomeMessage: "Welcome to my online resume",
     skills: ["Web development", " Tennis", " Running"],
     bioPic: "http://41.media.tumblr.com/4467dbf9616c0b3a1d69b1fdecb29f9e/tumblr_mnsc0gqtue1rw872io2_250.jpg",
 };
@@ -226,7 +226,7 @@ education.display = function() {
         var formattedEduDegree = HTMLschoolDegree.replace("%data%", education.schools[key].degree);
         $(".education-entry:last").append(formattedEduDegree);
 
-        var formattedEduMajor = HTMLschoolMajor.replace("%data%", education.schools[key].majors + "<br>");
+        var formattedEduMajor = HTMLschoolMajor.replace("%data%", education.schools[key].majors);
         $(".education-entry:last").append(formattedEduMajor);
 
         var formattedEduDates = HTMLschoolDates.replace("%data%", education.schools[key].dates);
@@ -243,7 +243,7 @@ education.display = function() {
             var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[key2].title);
             $(".education-entry:last").append(formattedOnlineTitle);
 
-            var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[key2].school + "<br>");
+            var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[key2].school);
             $(".education-entry:last").append(formattedOnlineSchool);
 
             var formattedOnlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses[key2].dates);
