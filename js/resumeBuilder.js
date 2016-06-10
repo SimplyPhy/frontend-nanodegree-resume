@@ -17,7 +17,7 @@ var bio = {
     },
     welcomeMessage: "Welcome to my online resume!",
     skills: ["Web development", " Tennis", " Running"],
-    bioPic: "http://41.media.tumblr.com/4467dbf9616c0b3a1d69b1fdecb29f9e/tumblr_mnsc0gqtue1rw872io2_250.jpg",
+    biopic: "http://41.media.tumblr.com/4467dbf9616c0b3a1d69b1fdecb29f9e/tumblr_mnsc0gqtue1rw872io2_250.jpg",
 };
 
 // Work object, containing information on previous employers
@@ -97,17 +97,17 @@ var education = {
     onlineCourses: [{
         title: "course 1",
         school: "online school 1",
-        dates: "2008-2010",
+        date: "2008-2010",
         url: "www.bing.com"
     }, {
         title: "course 1",
         school: "online school 2",
-        dates: "2010-2012",
+        date: "2010-2012",
         url: "www.yahoo.com"
     }, {
         title: "course 3",
         school: "online school 3",
-        dates: "2012-2016",
+        date: "2012-2016",
         url: "www.soundhound.com"
     }]
 };
@@ -128,7 +128,7 @@ bio.display = function() {
         $("#header").prepend(formattedName);
         var formattedWelcome = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
         $("#header").append(formattedWelcome);
-        var formattedWelcomePic = HTMLbioPic.replace("%data%", bio.bioPic);
+        var formattedWelcomePic = HTMLbioPic.replace("%data%", bio.biopic);
         $("#header").append(formattedWelcomePic);
     }
 
@@ -246,7 +246,7 @@ education.display = function() {
             var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[key2].school + "<br>");
             $(".education-entry:last").append(formattedOnlineSchool);
 
-            var formattedOnlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses[key2].dates);
+            var formattedOnlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses[key2].date);
             $(".education-entry:last").append(formattedOnlineDates);
 
             var formattedOnlineURL = HTMLonlineURL.replace("%data%", education.onlineCourses[key2].url);
